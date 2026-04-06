@@ -36,16 +36,16 @@ A full-stack web application that allows users to create, manage, and search not
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home](screenshots/home.png)
+![Home](Screenshots/home.png)
 
 ### 🔐 Login Page
-![Login](screenshots/login.png)
+![Login](Screenshots/login.png)
 
 ### 📝 Notes Page
-![Notes](screenshots/notes.png)
+![Notes](Screenshots/notes.png)
 
 ### 🤖 AI Assistant
-![AI](screenshots/ai.png)
+![AI](Screenshots/ai.png)
 
 ---
 
