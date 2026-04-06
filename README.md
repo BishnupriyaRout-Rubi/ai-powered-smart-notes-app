@@ -47,6 +47,19 @@ A full-stack web application that allows users to create, manage, and search not
 ### 🤖 AI Assistant
 ![AI](Screenshots/ai.png)
 
+
+### Trash page
+![Trash](Screenshots/trash.png)
+
+
+### Signup page
+![Signup](Screenshots/signup.png)
+
+
+### 🤖 Forgot password
+![Reset password](Screenshots/resetpass.png)
+
+
 ---
 
 ## 🔐 Environment Variables
