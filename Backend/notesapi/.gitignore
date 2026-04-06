@@ -1,0 +1,50 @@
+# 🔐 ENV
+.env
+.env.*
+
+# 🚫 Config files (sensitive)
+application.properties
+
+# 🚫 Build / Target
+target/
+build/
+
+# 🚫 Compiled files
+*.class
+*.jar
+
+# 🚫 Node (if used anywhere)
+node_modules/
+
+# 🚫 Logs
+*.log
+
+# 🚫 OS files
+.DS_Store
+Thumbs.db
+
+# 🚫 Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# 🚫 IntelliJ
+.idea/
+*.iml
+
+# 🚫 Eclipse / STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# 🚫 NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# 🚫 VS Code
+.vscode/
