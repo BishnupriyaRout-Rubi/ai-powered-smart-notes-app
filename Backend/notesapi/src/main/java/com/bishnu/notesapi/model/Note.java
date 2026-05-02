@@ -11,7 +11,7 @@ public class Note {
 
     private String title;
 
-    // 🔥 FIX: Large content support (VERY IMPORTANT)
+    //  FIX: Large content support
     @Column(columnDefinition = "TEXT")
     private String content;
 
@@ -23,12 +23,12 @@ public class Note {
 
     private String font;
 
-    // 👇 ADD THIS
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    // 🔥 OPTIONAL: auto timestamp
+    //  auto timestamp
     @PrePersist
     public void onCreate() {
         this.createdAt = java.time.LocalDateTime.now().toString();

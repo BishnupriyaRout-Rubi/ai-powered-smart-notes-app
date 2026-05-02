@@ -1,36 +1,36 @@
-# 🔐 ENV
+#  ENV
 .env
 .env.*
 
-# 🚫 Config files (sensitive)
+#  Config files (sensitive)
 application.properties
 
-# 🚫 Build / Target
+#  Build / Target
 target/
 build/
 
-# 🚫 Compiled files
+#  Compiled files
 *.class
 *.jar
 
-# 🚫 Node (if used anywhere)
+#  Node (if used anywhere)
 node_modules/
 
-# 🚫 Logs
+#  Logs
 *.log
 
-# 🚫 OS files
+#  OS files
 .DS_Store
 Thumbs.db
 
-# 🚫 Maven wrapper
+#  Maven wrapper
 .mvn/wrapper/maven-wrapper.jar
 
-# 🚫 IntelliJ
+#  IntelliJ
 .idea/
 *.iml
 
-# 🚫 Eclipse / STS
+#  Eclipse / STS
 .apt_generated
 .classpath
 .factorypath
@@ -39,12 +39,12 @@ Thumbs.db
 .springBeans
 .sts4-cache
 
-# 🚫 NetBeans
+#  NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-# 🚫 VS Code
+#  VS Code
 .vscode/

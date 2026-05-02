@@ -1,25 +1,25 @@
-# 🔐 ENV (sensitive)
+# ENV (sensitive)
 .env
 .env.*
 
-# 🚫 Config files
+# Config files
 application.properties
 
-# 🚫 Build folders
+#  Build folders
 target/
 build/
 
-# 🚫 Dependencies
+#  Dependencies
 node_modules/
 
-# 🚫 Logs
+#  Logs
 *.log
 
-# 🚫 OS files
+# OS files
 .DS_Store
 Thumbs.db
 
-# 🚫 IDE files
+# IDE files
 .idea/
 *.iml
 .vscode/

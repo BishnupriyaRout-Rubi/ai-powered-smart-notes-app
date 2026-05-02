@@ -2,64 +2,111 @@ package com.bishnu.notesapi.service;
 
 import com.bishnu.notesapi.model.Note;
 import com.bishnu.notesapi.repository.NoteRepository;
-import org.springframework.stereotype.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.stereotype.Service;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Service  //it shows that this lass handles bussiness logic, with java code
+@Service
 public class NoteService {
 
-    @Autowired      //Spring automatically creates object and inject it,
-                    // No need to create object manually by "new" keyword
-    private NoteRepository repo;
-//GET All
-public List<Note> getAllNotes(){
-    return repo.findByDeletedFalse();   // 🔥 new
-}
-//SAVE
-    public Note saveNote(Note note){     //for save notes
-        note.setCreatedAt(LocalDateTime.now().toString()); // set date -time
-        return repo.save(note);           //it save notes in note table in database == save(note)
+    private final NoteRepository repo;
+    private final SimpMessagingTemplate messagingTemplate;
+
+    @Autowired
+    public NoteService(
+            NoteRepository repo,
+            SimpMessagingTemplate messagingTemplate
+    ){
+        this.repo = repo;
+        this.messagingTemplate = messagingTemplate;
     }
-//DELETE
-public void deleteNote(Long id){
-    Note note = repo.findById(id)
-            .orElseThrow(() -> new RuntimeException("Note not found"));
 
-    note.setDeleted(true);   // 🔥 move to trash
-    repo.save(note);
-}
+    /* GET ALL */
+    public List<Note> getAllNotes(){
+        return repo.findByDeletedFalse();
+    }
 
+    /* SAVE */
+    public Note saveNote(Note note){
 
-//GET BY ID
+        note.setCreatedAt(LocalDateTime.now().toString());
+
+        Note savedNote = repo.save(note);
+
+        sendNotification("New note created: " + savedNote.getTitle());
+
+        return savedNote;
+    }
+
+    /* DELETE */
+    public void deleteNote(Long id){
+
+        Note note = repo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Note not found"));
+
+        note.setDeleted(true);
+        repo.save(note);
+
+        sendNotification("Note moved to trash");
+    }
+
+    /* GET BY ID */
     public Note getNoteById(Long id){
-        return repo.findById(id).
-                orElseThrow(() -> new RuntimeException("Note not found with id: " + id));
+        return repo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Note not found"));
     }
 
-//UPDATE
-     public Note updateNote(Long id, Note newNote){
+    /* UPDATE */
+    public Note updateNote(Long id, Note newNote){
+
+        System.out.println("🔥 SERVICE METHOD HIT");
+
         Note oldNote = repo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Note not found with id: " + id));
+                .orElseThrow(() -> new RuntimeException("Note not found"));
 
-         // 🔥 update
-         oldNote.setTitle(newNote.getTitle());
-         oldNote.setContent(newNote.getContent());
+        oldNote.setTitle(newNote.getTitle());
+        oldNote.setContent(newNote.getContent());
+        oldNote.setColor(newNote.getColor());
+        oldNote.setFont(newNote.getFont());
 
-         return repo.save(oldNote);
+        Note savedNote = repo.save(oldNote);
 
+        String userEmail = oldNote.getUser().getEmail();
 
-     }
+        sendNotification(
+                userEmail + " updated \"" + savedNote.getTitle() + "\""
+        );
 
-     public Note restoreNote(Long id){
-    Note note = repo.findById(id).orElseThrow();
-    note.setDeleted(false);
+        return savedNote;
+    }
 
-    return repo.save(note);
-     }
-     public void deleteForever(Long id){
-    repo.deleteById(id);
-     }
+    /* RESTORE */
+    public Note restoreNote(Long id){
+
+        Note note = repo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Note not found"));
+
+        note.setDeleted(false);
+
+        return repo.save(note);
+    }
+
+    /* DELETE FOREVER */
+    public void deleteForever(Long id){
+        repo.deleteById(id);
+    }
+
+    //  IMPORTANT METHOD
+    public void sendNotification(String message){
+        System.out.println("📡 Sending: " + message);
+
+        messagingTemplate.convertAndSend(
+                "/topic/notes",
+                message
+        );
+    }
 }

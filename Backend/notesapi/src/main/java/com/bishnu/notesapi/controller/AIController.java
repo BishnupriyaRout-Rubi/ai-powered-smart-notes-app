@@ -27,12 +27,12 @@ public class AIController {
         try {
             String url = "https://openrouter.ai/api/v1/chat/completions";
 
-            // 🔥 HEADERS
+            // HEADERS
             HttpHeaders headers = new HttpHeaders();
-            headers.set("Authorization", "Bearer " + apiKey); // 🔴 apna key
+            headers.set("Authorization", "Bearer " + apiKey); //  key
             headers.setContentType(MediaType.APPLICATION_JSON);
 
-            // 🔥 REQUEST BODY
+            //  REQUEST BODY
             Map<String, Object> requestBody = new HashMap<>();
             requestBody.put("model", "openrouter/auto");
 
@@ -47,7 +47,7 @@ public class AIController {
             HttpEntity<Map<String, Object>> entity =
                     new HttpEntity<>(requestBody, headers);
 
-            // 🔥 API CALL
+            //  API CALL
             ResponseEntity<String> response = restTemplate.exchange(
                     url,
                     HttpMethod.POST,
@@ -57,7 +57,7 @@ public class AIController {
 
             String responseBody = response.getBody();
 
-            // 🔥 JSON PARSE
+            //  JSON PARSE
             ObjectMapper mapper = new ObjectMapper();
             JsonNode jsonNode = mapper.readTree(responseBody);
 

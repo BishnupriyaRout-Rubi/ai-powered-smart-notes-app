@@ -4,7 +4,7 @@ A full-stack web application that allows users to create, manage, and search not
 
 ---
 
-## 🚀 Features
+##  Features
 
 - 🔐 User Authentication (Login / Signup / Forgot Password)
 - 🔑 Secure API handling
