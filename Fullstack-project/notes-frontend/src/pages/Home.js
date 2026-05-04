@@ -6,7 +6,7 @@ function Home(){
 
 const [notes,setNotes]=useState([]);
 const [search,setSearch]=useState("");
-//const [message,setMessage]=useState("");
+const [message,setMessage]=useState("");
 
 const navigate=useNavigate();
 
