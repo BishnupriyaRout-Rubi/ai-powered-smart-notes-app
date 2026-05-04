@@ -11,7 +11,7 @@ from "react-router-dom";
 function AddNote(){
 
 const [title,setTitle]=useState("");
-const [content,setContent]=useState("");
+///const [content,setContent]=useState("");
 const [color,setColor]=useState("#000000");
 const [font,setFont]=useState("Arial");
 
