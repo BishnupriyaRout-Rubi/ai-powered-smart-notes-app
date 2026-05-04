@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+}
+.title-input::placeholder {
+    color: #aaa;
+}
+body.dark .title-input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+[contenteditable]:empty:before {
+  content: attr(data-placeholder);
+   color: grey;
+  pointer-events: none;
+}
