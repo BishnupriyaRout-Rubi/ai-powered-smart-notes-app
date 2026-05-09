@@ -2,7 +2,10 @@ FROM eclipse-temurin:17
 
 WORKDIR /app
 
-COPY . .
+COPY pom.xml .
+COPY mvnw .
+COPY .mvn .mvn
+COPY src src
 
 RUN chmod +x mvnw
 
