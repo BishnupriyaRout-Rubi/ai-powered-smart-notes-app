@@ -1,42 +1,81 @@
 # 🤖 AI-Powered Smart Notes Application
 
-A full-stack web application that allows users to create, manage, and search notes with AI-powered assistance.
+🤖 AI-Powered Smart Notes Application
 
----
+A modern full-stack smart notes application with AI assistance, secure JWT authentication, real-time collaboration, and instant notifications.
+Built using React.js, Spring Boot, MySQL, and WebSocket technologies.
 
-##  Features
-
-- 🔐 User Authentication (Login / Signup / Forgot Password)
-- 🔑 Secure API handling
-- 📝 Create, View, Edit, and Delete Notes (CRUD)
-- 🔍 Search Notes functionality
+## ✨ Features
+- 🔐 JWT-based Authentication & Authorization
+- 👤 User Signup & Login System
+- 🔑 Secure API Access using Spring Security
+- 🔄 Forgot Password Functionality
+- 📝 Create, Edit, Delete, and Manage Notes
+- 🗑 Trash Management System
+- 🔍 Smart Search Functionality
 - 🤖 AI Assistant Integration
-- 📅 Timestamp for notes
-- 💡 Clean and responsive UI
+- 👥 Real-Time Collaboration
+- 🔔 Real-Time Notification System
+- 📅 Auto Timestamp Management
+- ⚡ RESTful APIs
+- 💡 Responsive & User-Friendly UI
 
----
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 
-### 🔹 Frontend
+## 🔹 Frontend
 - React.js
 - Axios
 - CSS
+- JavaScript
 
-### 🔹 Backend
+## 🔹 Backend
 - Spring Boot
+- Spring Security
+- JWT Authentication
 - REST APIs
-- JPA (Hibernate)
+- Spring Data JPA (Hibernate)
+- WebSocket
+- WebFlux
 
-### 🔹 Database
+## 🔹 Database
 - MySQL
 
+## 🔹 Tools & Deployment
+- Maven
+- Git & GitHub
+- Docker
+- Railway / Render
+
 ---
+
+# 🚀 Advanced Functionalities
+
+## 🔐 JWT Authentication
+- Implemented secure token-based authentication and authorization using JWT and Spring Security.
+- Protected APIs and user routes from unauthorized access.
+
+## 👥 Real-Time Collaboration
+- Enabled multiple users to collaborate and update notes instantly.
+- Implemented using WebSocket for real-time communication.
+
+## 🔔 Notification System
+- Added instant real-time notifications for note updates and collaboration activities.
+
+## 🤖 AI Assistant
+- Integrated AI-powered assistance for smart note management and productivity enhancement.
+
 
 ## 📸 Screenshots
 
 ### 🏠 Home Page
 ![Home](Screenshots/home.png)
+
+### 🔔 Notification
+![Notification](Screenshots/notification.png)
+
+### 🤝 Shared Note 
+![Shared](Screenshots/shared.png)
 
 ### 🔐 Login Page
 ![Login](Screenshots/login.png)
@@ -64,10 +103,10 @@ A full-stack web application that allows users to create, manage, and search not
 
 ## 🔐 Environment Variables
 
-Create a system environment variable:
+Create a system environment variables
 AI_KEY=your_api_key_here
+JWT_SECRET=your_secret_key
 
-> ⚠️ Do not hardcode API keys in the code.
 
 ## ▶️ Run Locally
 
@@ -96,17 +135,19 @@ Notes-App/
 
 ## 💡 Future Enhancements
 
-- ☁️ Deploy to cloud (AWS / Render)
-- 📱 Improve mobile responsiveness
-- 📊 Add dashboard/analytics
-- 🔔 Notification system
+☁️ AWS Cloud Deployment
+📱 Improved Mobile Responsiveness
+📊 Analytics Dashboard
+🧠 AI Note Summarization
+📎 File/Image Attachments
+🌐 Multi-language Support
 
 ---
 
 ## 👩‍💻 Author
 
 - **Bishnupriya Rout**
-
+GitHub: BishnupriyaRout-Rubi
 ---
 
 ## ⭐ If you like this project
