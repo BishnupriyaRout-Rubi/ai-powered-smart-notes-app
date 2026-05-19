@@ -71,14 +71,18 @@ Built using React.js, Spring Boot, MySQL, and WebSocket technologies.
 ### 🏠 Home Page
 ![Home](Screenshots/home.png)
 
+
 ### 🔔 Notification
 ![Notification](Screenshots/notification.png)
+
 
 ### 🤝 Shared Note 
 ![Shared](Screenshots/shared.png)
 
+
 ### 🔐 Navbar
 ![Navbar](Screenshots/navbar.png)
+
 
 ### 🔐 Add Note Page
 ![Add Note](Screenshots/addnote.png)
@@ -87,6 +91,7 @@ Built using React.js, Spring Boot, MySQL, and WebSocket technologies.
 ### 📝 Notes Page
 ![Notes](Screenshots/notes.png)
 
+
 ### 🤖 AI Assistant
 ![AI](Screenshots/ai.png)
 
@@ -94,8 +99,10 @@ Built using React.js, Spring Boot, MySQL, and WebSocket technologies.
 ### Trash page
 ![Trash](Screenshots/trash.png)
 
+
 ### 🔐 Login Page
 ![Login](Screenshots/login.png)
+
 
 ### Signup page
 ![Signup](Screenshots/signup.png)
@@ -117,15 +124,15 @@ JWT_SECRET=your_secret_key
 ## ▶️ Run Locally
 
 ### 🔹 Backend
-cd Backend/notesapi
-mvn spring-boot:run
+- cd Backend/notesapi
+- mvn spring-boot:run
 
 ---
 
 ### 🔹 Frontend
-cd Fullstack-project/notes-frontend
-npm install
-npm start
+- cd Fullstack-project/notes-frontend
+- npm install
+- npm start
 
 ---
 
@@ -141,19 +148,19 @@ Notes-App/
 
 ## 💡 Future Enhancements
 
-☁️ AWS Cloud Deployment
-📱 Improved Mobile Responsiveness
-📊 Analytics Dashboard
-🧠 AI Note Summarization
-📎 File/Image Attachments
-🌐 Multi-language Support
+- ☁️ AWS Cloud Deployment
+- 📱 Improved Mobile Responsiveness
+- 📊 Analytics Dashboard
+- 🧠 AI Note Summarization
+- 📎 File/Image Attachments
+- 🌐 Multi-language Support
 
 ---
 
 ## 👩‍💻 Author
 
 - **Bishnupriya Rout**
-GitHub: BishnupriyaRout-Rubi
+- **GitHub: BishnupriyaRout-Rubi**
 ---
 
 ## ⭐ If you like this project
