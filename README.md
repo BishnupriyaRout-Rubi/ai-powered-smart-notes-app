@@ -77,8 +77,12 @@ Built using React.js, Spring Boot, MySQL, and WebSocket technologies.
 ### 🤝 Shared Note 
 ![Shared](Screenshots/shared.png)
 
-### 🔐 Login Page
-![Login](Screenshots/login.png)
+### 🔐 Navbar
+![Navbar](Screenshots/navbar.png)
+
+### 🔐 Add Note Page
+![Add Note](Screenshots/addnote.png)
+
 
 ### 📝 Notes Page
 ![Notes](Screenshots/notes.png)
@@ -90,6 +94,8 @@ Built using React.js, Spring Boot, MySQL, and WebSocket technologies.
 ### Trash page
 ![Trash](Screenshots/trash.png)
 
+### 🔐 Login Page
+![Login](Screenshots/login.png)
 
 ### Signup page
 ![Signup](Screenshots/signup.png)
