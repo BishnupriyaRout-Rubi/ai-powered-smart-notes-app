@@ -2,8 +2,7 @@
 .env
 .env.*
 
-# Config files
-application.properties
+
 
 #  Build folders
 target/

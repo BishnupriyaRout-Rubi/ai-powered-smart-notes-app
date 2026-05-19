@@ -2,8 +2,7 @@
 .env
 .env.*
 
-#  Config files (sensitive)
-application.properties
+
 
 #  Build / Target
 target/
