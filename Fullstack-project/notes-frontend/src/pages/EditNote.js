@@ -1,3 +1,4 @@
+import API_BASE_URL from "../config";
 import React,{useEffect,useState} from "react";
 import SockJS from "sockjs-client";
 import { Client } from "@stomp/stompjs";
@@ -26,7 +27,7 @@ useEffect(()=>{
 const token=localStorage.getItem("token");
 
 fetch(
-`${process.env.REACT_APP_API_URL}/notes/${id}`,
+`${API_BASE_URL}/notes/${id}`,
 {
 headers:{
 Authorization:`Bearer ${token}`
@@ -124,7 +125,7 @@ const token=
 localStorage.getItem("token");
 
 fetch(
-`${process.env.REACT_APP_API_URL}/notes/${id}`,
+`${API_BASE_UR}/notes/${id}`,
 {
 method:"PUT",
 

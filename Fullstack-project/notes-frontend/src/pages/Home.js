@@ -1,3 +1,4 @@
+import API_BASE_URL from "../config";
 import React,{useEffect,useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
@@ -28,7 +29,7 @@ if(!email || !token){
 setNotes([]);
 
 axios.get(
-`${process.env.REACT_APP_API_URL}/notes?email=${email}`,
+`${API_BASE_URL}/notes?email=${email}`,
 {
 headers:{
 Authorization:`Bearer ${token}`

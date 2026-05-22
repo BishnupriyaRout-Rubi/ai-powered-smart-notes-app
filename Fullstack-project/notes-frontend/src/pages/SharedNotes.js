@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import API_BASE_URL from "../config";
+import
+React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function SharedNotes() {
@@ -18,7 +20,7 @@ function SharedNotes() {
     const token = localStorage.getItem("token");
     const email = localStorage.getItem("user");
 
-    fetch(`${process.env.REACT_APP_API_URL}/notes/shared?email=${email}`, {
+    fetch(`${API_BASE_URL}/notes/shared?email=${email}`, {
       headers: {
         Authorization: `Bearer ${token}`
       }

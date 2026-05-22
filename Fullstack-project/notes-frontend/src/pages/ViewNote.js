@@ -1,3 +1,4 @@
+import API_BASE_URL from "../config";
 import React, { useEffect, useState, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -14,7 +15,7 @@ function ViewNote() {
   const loadFiles = useCallback(() => {
     const token = localStorage.getItem("token");
 
-    fetch(`${process.env.REACT_APP_API_URL}/files/${id}`, {
+    fetch(`${API_BASE_URL}/files/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -49,7 +50,7 @@ function ViewNote() {
     }
 
     axios
-      .get(`${process.env.REACT_APP_API_URL}/notes/${id}`, {
+      .get(`${API_BASE_URL}/notes/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -79,7 +80,7 @@ function ViewNote() {
     formData.append("file", file);
 
     const res = await fetch(
-      `${process.env.REACT_APP_API_URL}/files/upload/${id}`,
+      `${API_BASE_URL}/files/upload/${id}`,
       {
         method: "POST",
         headers: {
@@ -103,7 +104,7 @@ function ViewNote() {
     const ownerEmail = localStorage.getItem("user");
 
     const res = await fetch(
-      `${process.env.REACT_APP_API_URL}/notes/share/${id}?ownerEmail=${ownerEmail}&collaboratorEmail=${collaboratorEmail}`,
+      `${API_BASE_URL}/notes/share/${id}?ownerEmail=${ownerEmail}&collaboratorEmail=${collaboratorEmail}`,
       {
         method: "POST",
         headers: {
@@ -119,7 +120,7 @@ function ViewNote() {
   const deleteNote = () => {
     const token = localStorage.getItem("token");
 
-    fetch(`${process.env.REACT_APP_API_URL}/notes/${id}`, {
+    fetch(`${API_BASE_URL}/notes/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

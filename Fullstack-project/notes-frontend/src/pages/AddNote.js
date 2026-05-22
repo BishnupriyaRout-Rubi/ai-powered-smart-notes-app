@@ -1,3 +1,4 @@
+import API_BASE_URL from "../config";
 import React,{useState,useEffect,useRef}
 from "react";
 
@@ -90,7 +91,7 @@ localStorage.getItem("token");
 try{
 
 const res=await fetch(
-`${process.env.REACT_APP_API_URL}/notes`,
+`${API_BASE_URL}/notes`,
 {
 method:"POST",
 

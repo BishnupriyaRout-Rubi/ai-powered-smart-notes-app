@@ -1,3 +1,4 @@
+import API_BASE_URL from "../config";
 import React,{useState} from "react";
 import {useNavigate} from "react-router-dom";
 
@@ -36,7 +37,7 @@ if(password!==confirmPassword){
 }
 
 const res = await fetch(
-`${process.env.REACT_APP_API_URL}/auth/signup`,
+`${API_BASE_URL}/auth/signup`,
 {
  method:"POST",
  headers:{

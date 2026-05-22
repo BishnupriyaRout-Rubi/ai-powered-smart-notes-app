@@ -1,3 +1,4 @@
+import API_BASE_URL from "../config";
 import React,{useEffect,useState}
 from "react";
 
@@ -27,7 +28,7 @@ if(!token||!email){
 
 
 fetch(
-`${process.env.REACT_APP_API_URL}/notes/trash?email=${email}`,
+`${API_BASE_URL}/notes/trash?email=${email}`,
 {
 headers:{
 Authorization:`Bearer ${token}`
@@ -52,7 +53,7 @@ const token=
 localStorage.getItem("token");
 
 fetch(
-`${process.env.REACT_APP_API_URL}/notes/restore/${id}`,
+`${API_BASE_URL}/notes/restore/${id}`,
 {
 method:"PUT",
 headers:{
@@ -78,7 +79,7 @@ const token=
 localStorage.getItem("token");
 
 fetch(
-`${process.env.REACT_APP_API_URL}/notes/delete/${id}`,
+`${API_BASE_URL}/notes/delete/${id}`,
 {
 method:"DELETE",
 headers:{

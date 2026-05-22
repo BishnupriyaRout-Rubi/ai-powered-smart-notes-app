@@ -1,3 +1,4 @@
+import API_BASE_URL from "../config";
 import React,{useState} from "react";
 import {useNavigate} from "react-router-dom";
 
@@ -28,7 +29,7 @@ setAiResponse("");
 try{
 
 const res=await fetch(
-`${process.env.REACT_APP_API_URL}/ai/generate`,
+`${API_BASE_URL}/ai/generate`,
 {
 method:"POST",
 headers:{
