@@ -50,9 +50,11 @@ public class JwtFilter
                         ||
                         path.startsWith("/uploads")
 
-                        /* 🔥 IMPORTANT */
+
                         ||
                         path.startsWith("/ws")
+                        ||
+                        path.startsWith("/test")
         ){
             filterChain.doFilter(
                     request,
