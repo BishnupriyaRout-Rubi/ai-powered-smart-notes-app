@@ -1,4 +1,4 @@
-import API_BASE_URL from "../config";
+import API_BASE_URL from "../Config";
 import React,{useState}
 from "react";
 
