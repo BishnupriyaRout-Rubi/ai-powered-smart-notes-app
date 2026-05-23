@@ -20,7 +20,9 @@ public class CorsConfig {
                 new CorsConfiguration();
 
         config.setAllowedOrigins(
-                List.of("http://localhost:3000")
+                List.of("http://localhost:3000",
+                        "https:/https://https://ai-powered-smart-notes-app-9o5w-mu.vercel.app"
+                )
         );
 
         config.setAllowedMethods(
