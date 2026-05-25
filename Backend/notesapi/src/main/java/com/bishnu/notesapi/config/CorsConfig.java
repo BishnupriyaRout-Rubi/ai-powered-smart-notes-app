@@ -2,7 +2,6 @@ package com.bishnu.notesapi.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -13,15 +12,14 @@ import java.util.List;
 public class CorsConfig {
 
     @Bean
-    public CorsConfigurationSource
-    corsConfigurationSource(){
+    public CorsConfigurationSource corsConfigurationSource() {
 
-        CorsConfiguration config =
-                new CorsConfiguration();
+        CorsConfiguration config = new CorsConfiguration();
 
         config.setAllowedOrigins(
-                List.of("http://localhost:3000",
-                        "https:/https://https://ai-powered-smart-notes-app-9o5w-mu.vercel.app"
+                List.of(
+                        "http://localhost:3000",
+                        "https://ai-powered-smart-notes-app-364x.vercel.app"
                 )
         );
 
@@ -35,23 +33,16 @@ public class CorsConfig {
                 )
         );
 
-        config.setAllowedHeaders(
-                List.of("*")
-        );
+        config.setAllowedHeaders(List.of("*"));
 
-        /* 🔥 IMPORTANT FIX */
+        // IMPORTANT
         config.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
 
-        source.registerCorsConfiguration(
-                "/**",
-                config
-        );
+        source.registerCorsConfiguration("/**", config);
 
         return source;
-
     }
-
 }
