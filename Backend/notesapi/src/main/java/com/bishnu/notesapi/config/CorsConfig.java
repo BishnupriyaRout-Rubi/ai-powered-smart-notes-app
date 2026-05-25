@@ -16,10 +16,10 @@ public class CorsConfig {
 
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(
+        config.setAllowedOriginPatterns(
                 List.of(
                         "http://localhost:3000",
-                        "https://ai-powered-smart-notes-app-364x.vercel.app"
+                        "https://*.vercel.app"
                 )
         );
 
