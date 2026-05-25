@@ -125,7 +125,7 @@ const token=
 localStorage.getItem("token");
 
 fetch(
-`${API_BASE_UR}/notes/${id}`,
+`${API_BASE_URL}/notes/${id}`,
 {
 method:"PUT",
 
