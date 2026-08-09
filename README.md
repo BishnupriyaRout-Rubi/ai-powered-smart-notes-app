@@ -157,6 +157,19 @@ Notes-App/
 
 ---
 
+# 🔒 Source Code Usage
+
+© 2026 Bishnupriya Rout. All Rights Reserved.
+
+This project is created for portfolio and demonstration purposes only.
+
+The source code may be viewed for reference, but may not be copied,
+modified, reused, redistributed, or submitted as another person's work
+without permission.
+
+---
+
+
 ## 👩‍💻 Author
 
 - **Bishnupriya Rout**
